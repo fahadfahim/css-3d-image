@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #000000;
+}
+.boxs{
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) skewY(-10deg);
+    width: 400px;
+    height: 400px;
+    background: url(photo-of-a-man-listening-music-on-his-phone-846741.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -10px 5px 30px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    transition: .5s;
+    margin: 1rem;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 25px;
+    height: 100%;
+    background: #e0e0e0;
+    transform-origin: right bottom;
+    transform: skewY(45deg);
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: #e0e0e0;
+    transform-origin: bottom left;
+    transform: skewX(45deg);
+}
+.box h3{
+    position: relative;
+    background: #169fff;
+    color: #fff;
+    text-align: center;
+    margin: 40px 0 0;
+    padding: 5px 0;
+    font-size: 36px;
+}
+.box p{
+    padding: 0 20px;
+    color: #000;
+    text-align: center;
+}
